@@ -50,6 +50,8 @@
      34  COMPANY / EDITORIAL .............. about, careers, sustainability, press, membership
      -- ux / bounce-rate --
      35  GLOBAL UX (anbar/skip/to-top) .... all pages
+     -- responsive / mobile --
+     36  RESPONSIVE & TOUCH UX ............ all pages (phone + tablet)
 
    PER-PAGE INDEX (which sections each page needs — chrome = 01-04,06,13,16-18,30,35)
    ---------------------------------------------------------------------------------
@@ -701,3 +703,137 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 600; letter-spacing: -0
 
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, .btn:focus-visible { outline: 2px solid #c98a63; outline-offset: 2px; border-radius: 2px; }
 @media (prefers-reduced-motion: reduce) { .to-top { transition: none; } }
+
+/* ===================================================================
+   36 · RESPONSIVE & TOUCH UX  (Pages: all — phone + tablet refinements)
+   Layered last so it refines the components above without reordering
+   them. Three concerns:
+     a) touch ergonomics  — tap targets, tap feedback, no sticky hover
+     b) mobile menu        — backdrop scrim, close button, scroll-lock
+     c) breakpoint polish  — tablet-portrait + small-phone layouts
+   Driven by the JS in script.js §E (adds .nav-scrim, .nav__close,
+   body.nav-locked, aria-expanded on the hamburger).
+   =================================================================== */
+
+/* keep in-page anchors clear of the sticky header */
+html { scroll-padding-top: 88px; }
+
+/* a) TOUCH ERGONOMICS ------------------------------------------------ */
+/* remove the grey flash Android paints over tapped controls */
+a, button, input, select, textarea, .btn, .icon-btn, .round, .wish,
+.size, .swatch, .chip, .hamburger { -webkit-tap-highlight-color: transparent; }
+
+@media (hover: none) {
+  /* press feedback that works without a real :hover state */
+  .btn:active { transform: scale(0.97); }
+  .icon-btn:active, .round:active, .hamburger:active { background: #e4e4e4; }
+  .product:active .product__media { transform: scale(0.99); }
+  /* lift/scale affordances must not latch on after a tap */
+  .tile:hover, .cat-cell:hover, .acct-card:hover, .help-link:hover,
+  .role:hover, .post-card:hover, .product:hover .product__media,
+  .pay-badge:hover { transform: none; }
+  .nav__menu a::after { display: none; } /* underline-on-hover is pointless on touch */
+}
+
+/* b) MOBILE MENU CHROME --------------------------------------------- */
+.nav-scrim {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  opacity: 0; visibility: hidden; transition: opacity 0.3s var(--ease);
+  z-index: 94; /* below the menu drawer (95), above the sticky nav */
+}
+.nav-scrim.open { opacity: 1; visibility: visible; }
+body.nav-locked { overflow: hidden; }
+.nav__close { display: none; } /* shown only inside the mobile drawer */
+
+/* c) TABLET — portrait & small landscape (<= 1024px) ---------------- */
+/* Tighten the desktop nav dropdown only while it is still a dropdown
+   (>860px); below that §30 turns it into the slide-out drawer. */
+@media (min-width: 861px) and (max-width: 1024px) {
+  .nav__menu { gap: 1.1rem; }
+  .nav__menu a { font-size: 0.98rem; }
+  .mega { padding: 1.3rem 1.5rem; gap: 1.8rem; }
+}
+/* Product cards shrink through the whole tablet range so two-plus show. */
+@media (max-width: 1024px) {
+  .product { flex-basis: clamp(240px, 40vw, 320px); }
+}
+
+/* Tablet-portrait & below: stack the dense two-column components a bit
+   earlier than their original 760px so iPad-portrait isn't cramped. */
+@media (max-width: 860px) {
+  .nav__close {
+    display: inline-flex; align-items: center; justify-content: center;
+    position: absolute; top: 0.7rem; right: 0.8rem; width: 44px; height: 44px;
+    border: none; background: transparent; cursor: pointer;
+    font-size: 1.9rem; line-height: 1; color: var(--ink); border-radius: 50%;
+  }
+  .nav__close:active { background: #f0f0f0; }
+  .nav__menu { padding-top: 4.2rem; }
+
+  .tiles { grid-template-columns: 1fr 1fr; }
+  .tile--big { grid-column: 1 / -1; aspect-ratio: 16/9; }
+  .pdp { grid-template-columns: 1fr; }
+  .pdp__gallery { grid-template-columns: 1fr; }
+  .pdp__thumbs { flex-direction: row; flex-wrap: wrap; }
+  .two-col { grid-template-columns: 1fr; }
+  .sticky-side { position: static; }
+}
+
+/* d) PHONE (<= 560px) ----------------------------------------------- */
+@media (max-width: 560px) {
+  /* generous, thumb-friendly hit areas across the chrome */
+  .nav { padding: 0.55rem 1rem; }
+  .nav__logo img { height: 38px; }
+  .nav__logo .wordmark { font-size: 1.2rem; }
+  .icon-btn { min-width: 44px; min-height: 44px; justify-content: center; font-size: 1.35rem; }
+  .hamburger { min-width: 44px; min-height: 44px; font-size: 1.6rem; padding: 0.3rem 0.5rem; }
+  .nav__tools { gap: 0.25rem; }
+
+  /* hero scales to the viewport instead of overflowing */
+  .hero { min-height: 76vh; }
+  .hero__content { padding: 1.6rem 1.2rem 2.4rem; }
+  .hero__title { font-size: clamp(3rem, 19vw, 5rem); }
+  .hero__sub { font-size: 1rem; }
+  .hero__actions { width: 100%; }
+  .hero__actions .btn { flex: 1 1 auto; text-align: center; }
+
+  /* let the product rail "peek" the next card so it reads as scrollable */
+  .product { flex-basis: 76vw; }
+  .rail__head h2 { font-size: 1.4rem; }
+
+  /* collection filters: compact two-up instead of a tall single column */
+  .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 0.1rem 1rem; }
+  .filters h4 { grid-column: 1 / -1; }
+  .shop__bar { gap: 0.6rem; }
+  .sort { width: 100%; justify-content: space-between; }
+  .sort select { flex: 1; }
+
+  /* product detail: full-width primary actions */
+  .pdp__buy { flex-wrap: wrap; }
+  .pdp__buy .btn { flex: 1 1 100%; text-align: center; }
+
+  /* forms go full-width and buttons become easy targets */
+  .app-form .btn { align-self: stretch; text-align: center; }
+  .footer__news-row { flex-direction: column; }
+  .footer__news .btn { width: 100%; }
+  .newsletter__form { flex-direction: column; }
+
+  /* roomier footer link rows for tapping */
+  .footer__cols a { padding: 0.2rem 0; margin-bottom: 0.45rem; }
+  .footer__legal { gap: 0.8rem 1.2rem; }
+
+  /* keep the floating button inside notch / home-indicator safe areas */
+  .to-top {
+    right: max(0.9rem, env(safe-area-inset-right));
+    bottom: max(0.9rem, env(safe-area-inset-bottom));
+    width: 44px; height: 44px;
+  }
+}
+
+/* respect notch insets for the slide-out panels */
+@supports (padding: max(0px)) {
+  .nav__menu { padding-left: max(1.4rem, env(safe-area-inset-left)); }
+  .cart-drawer__head, .cart-drawer__items, .cart-drawer__foot {
+    padding-right: max(1.4rem, env(safe-area-inset-right));
+  }
+}

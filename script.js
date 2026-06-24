@@ -174,13 +174,49 @@
   /* ── E · MOBILE NAV + MEGA TOGGLE ───────────────────  Pages: all ── */
   const hamburger = $("#hamburger"), navMenu = $("#navMenu");
   if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => navMenu.classList.toggle("open"));
+    // Build the mobile-menu chrome once (no per-page HTML needed):
+    // a backdrop scrim and an in-drawer close button.
+    const navScrim = document.createElement("div");
+    navScrim.className = "nav-scrim";
+    document.body.appendChild(navScrim);
+
+    const navClose = document.createElement("button");
+    navClose.className = "nav__close";
+    navClose.type = "button";
+    navClose.setAttribute("aria-label", "Close menu");
+    navClose.innerHTML = "&times;";
+    navMenu.prepend(navClose);
+
+    hamburger.setAttribute("aria-expanded", "false");
+    hamburger.setAttribute("aria-controls", "navMenu");
+
+    const setMenu = (open) => {
+      navMenu.classList.toggle("open", open);
+      navScrim.classList.toggle("open", open);
+      document.body.classList.toggle("nav-locked", open);
+      hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+      if (!open) $$(".nav__item.open", navMenu).forEach((i) => i.classList.remove("open"));
+    };
+
+    hamburger.addEventListener("click", () => setMenu(!navMenu.classList.contains("open")));
+    navScrim.addEventListener("click", () => setMenu(false));
+    navClose.addEventListener("click", () => setMenu(false));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
+    // Reset the menu if the viewport grows back to the desktop layout.
+    window.matchMedia("(min-width: 861px)").addEventListener("change", (e) => { if (e.matches) setMenu(false); });
+
     $$(".nav__item > a", navMenu).forEach((a) => {
       a.addEventListener("click", (e) => {
         if (window.matchMedia("(max-width: 860px)").matches && a.parentElement.querySelector(".mega")) {
           e.preventDefault();
           a.parentElement.classList.toggle("open");
         }
+      });
+    });
+    // Tapping a real destination link closes the drawer as it navigates.
+    $$("a[href]", navMenu).forEach((a) => {
+      a.addEventListener("click", () => {
+        if (!a.parentElement.querySelector(".mega")) setMenu(false);
       });
     });
   }
