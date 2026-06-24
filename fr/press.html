@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presse — SILENCE</title>
+  <link rel="icon" type="image/svg+xml" href="../logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Aller au contenu</a>
+  <div class="anbar" id="anbar"><span>&#10038; Livraison offerte dès 75 € &middot; Rejoignez <a href="membership.html">Le Cercle SILENCE</a> pour l'accès anticipé &amp; 10 € offerts &rarr;</span><button class="anbar__x" data-anbar-close aria-label="Fermer">&times;</button></div>
+<div class="util">
+    <div class="util__left">SILENCE</div>
+    <nav class="util__right">
+      <select class="util__sel" id="langSel" aria-label="Langue"><option value="en">EN</option><option value="fr">FR</option></select><select class="util__sel" id="curSel" aria-label="Devise"><option value="EUR">€ EUR</option><option value="USD">$ Dollar</option><option value="XOF">CFA XOF</option></select><span>|</span>
+      <a href="store-locator.html">Trouver une boutique</a><span>|</span>
+      <a href="faq.html">Aide</a><span>|</span>
+      <a href="register.html">Rejoignez-nous</a><span>|</span>
+      <a href="login.html">Connexion</a>
+    </nav>
+  </div>
+  <header class="nav" id="nav">
+    <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">&#9776;</button>
+    <a href="index.html" class="nav__logo" aria-label="Accueil SILENCE">
+      <img src="../logo-lockup.svg" alt="SILENCE" />
+    </a>
+    <nav class="nav__menu" id="navMenu">
+      <div class="nav__item">
+        <a href="new-releases.html">Nouveautés</a>
+        <div class="mega">
+          <div><h5>À la une</h5><a href="new-releases.html">Nouveautés</a><a href="best-sellers.html">Meilleures ventes</a><a href="air-max.html">Signature</a><a href="sale.html">Soldes</a></div>
+          <div><h5>Boutique</h5><a href="shoes.html">Vêtements d'extérieur</a><a href="clothing.html">Vêtements</a><a href="accessories.html">Accessoires</a><a href="gift-cards.html">Cartes cadeaux</a></div>
+          <div><h5>Collections</h5><a href="running.html">Pour les producteurs</a><a href="training.html">Pour les artistes</a><a href="lifestyle.html">Scène &amp; Tournée</a><a href="football.html">DJs</a><a href="basketball.html">Vinyles &amp; Goodies</a></div>
+          <div><h5>Sport</h5><a href="run.html">Course</a><a href="gym.html">Gym &amp; Entraînement</a></div><div><h5>Inspiration</h5><a href="journal.html">Journal</a><a href="lookbook.html">Lookbook</a><a href="membership.html">Adhésion</a></div>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a href="men.html">Homme</a>
+        <div class="mega">
+          <div><h5>À la une</h5><a href="new-releases.html">Nouveautés</a><a href="best-sellers.html">Meilleures ventes</a><a href="sale.html">Soldes</a></div>
+          <div><h5>Extérieur</h5><a href="shoes.html">Tout l'extérieur</a><a href="running.html">Pour les producteurs</a><a href="training.html">Pour les artistes</a><a href="basketball.html">Vinyles &amp; Goodies</a></div>
+          <div><h5>Vêtements</h5><a href="clothing.html">Tous les vêtements</a><a href="accessories.html">Accessoires</a></div>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a href="women.html">Femme</a>
+        <div class="mega">
+          <div><h5>À la une</h5><a href="new-releases.html">Nouveautés</a><a href="best-sellers.html">Meilleures ventes</a><a href="sale.html">Soldes</a></div>
+          <div><h5>Extérieur</h5><a href="shoes.html">Tout l'extérieur</a><a href="running.html">Pour les producteurs</a><a href="lifestyle.html">Scène &amp; Tournée</a></div>
+          <div><h5>Vêtements</h5><a href="clothing.html">Tous les vêtements</a><a href="accessories.html">Accessoires</a></div>
+        </div>
+      </div>
+      <a href="kids.html">Enfant</a>
+      <a href="sale.html" class="is-sale">Soldes</a>
+    </nav>
+    <div class="nav__tools">
+      <form class="search" action="search.html" method="get" role="search">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2"/></svg>
+        <input type="search" name="q" placeholder="Rechercher" aria-label="Rechercher" />
+      </form>
+      <a href="wishlist.html" class="icon-btn" aria-label="Favoris">&#9825;<span class="badge" id="wishCount">0</span></a>
+      <button class="icon-btn" data-cart-open aria-label="Panier" style="border:none;background:transparent;cursor:pointer;font-size:1.25rem;">&#9094;<span class="badge" id="cartCount">0</span></button>
+      <a href="account.html" class="icon-btn" aria-label="Compte" style="font-size:1.2rem;">&#9737;</a>
+    </div>
+  </header>
+  <div class="drawer-overlay" id="drawerOverlay" data-cart-close></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Panier">
+    <div class="cart-drawer__head"><h3>Votre panier</h3><button class="cart-drawer__close" data-cart-close aria-label="Fermer">&times;</button></div>
+    <div class="cart-drawer__items" id="cartDrawerItems"></div>
+    <div class="cart-drawer__foot">
+      <div class="row"><span>Sous-total</span><span id="drawerSubtotal">€0.00</span></div>
+      <a href="cart.html" class="btn btn--block">Voir le panier &amp; payer</a>
+    </div>
+  </aside>
+  <main id="content">
+<section class="page-hero">
+  <p class="page-hero__kicker">Salle de presse</p>
+  <h1>Presse &amp; Médias</h1>
+  <p>La source officielle pour les actualités, les ressources de marque et l'accès aux porte-parole de SILENCE. Tout ce qui figure ici provient directement de nous, prêt à l'emploi. Pour les interviews, les échantillons ou les informations rapides, notre équipe presse répond sous un jour ouvré.</p>
+</section>
+<nav class="breadcrumb"><a href="index.html">Accueil</a><span>/</span>Presse</nav>
+
+<section class="stats-band page-body reveal">
+  <div class="stats">
+    <div><span class="stats__num" data-count="2026">0</span><div class="stats__label">Fondée en</div></div>
+    <div><span class="stats__num" data-count="80" data-suffix="k+">0</span><div class="stats__label">Communauté de créateurs</div></div>
+    <div><span class="stats__num" data-count="14">0</span><div class="stats__label">Pays livrés</div></div>
+    <div><span class="stats__num" data-count="1" data-suffix=" jour">0</span><div class="stats__label">Demandes traitées sous</div></div>
+  </div>
+</section>
+
+<section class="page-body reveal">
+  <p class="statement">Nous concevons pour celles et ceux qui créent le son — et nous laissons le travail parler. <em>Sinon, j'écoute.</em></p>
+  <p class="lead-narrow">SILENCE est une marque pour les musiciens : matériel de studio, vêtements et accessoires pensés pour celles et ceux qui façonnent ce que nous écoutons, portés par une voix éditoriale qui troque le battage médiatique contre la sagesse. Vous trouverez ci-dessous nos dernières annonces, un kit média complet et une ligne directe vers l'équipe. Utilisez-le librement — et s'il vous manque quelque chose, demandez-nous.</p>
+</section>
+
+<section class="page-body reveal">
+  <div class="prose"><h2>Dernières actualités</h2></div>
+  <div class="press-list">
+    <div class="press-item">
+      <time>12 juin 2026</time>
+      <h3>SILENCE lance The Studio Line — une première gamme de matériel de monitoring et de captation conçu pour la pièce dans laquelle vous travaillez vraiment</h3>
+      <a href="journal.html">Lire →</a>
+    </div>
+    <div class="press-item">
+      <time>21 mai 2026</time>
+      <h3>Le Journal atteint ses cent premiers essais et bâtit une bibliothèque ouverte de savoirs sur le métier, le business et les droits pour les artistes en activité</h3>
+      <a href="journal.html">Lire →</a>
+    </div>
+    <div class="press-item">
+      <time>29 avr. 2026</time>
+      <h3>SILENCE ouvre son programme Voices, en s'associant à des artistes indépendants pour partager des leçons durement acquises à travers Le Journal</h3>
+      <a href="journal.html">Lire →</a>
+    </div>
+    <div class="press-item">
+      <time>17 mars 2026</time>
+      <h3>SILENCE introduit l'adhésion gratuite, offrant les tarifs membres, l'accès anticipé aux sorties et l'intégralité des archives du Journal à chaque compte</h3>
+      <a href="journal.html">Lire →</a>
+    </div>
+    <div class="press-item">
+      <time>05 févr. 2026</time>
+      <h3>SILENCE dévoile sa collection de vêtements et d'accessoires — des pièces du quotidien sobres et réfléchies pour celles et ceux qui font la musique</h3>
+      <a href="journal.html">Lire →</a>
+    </div>
+  </div>
+</section>
+
+<section class="page-body reveal">
+  <div class="prose"><h2>Kit média</h2><p>Ressources approuvées pour un usage éditorial et audiovisuel. Merci de créditer « SILENCE » et d'éviter toute altération des logos, des proportions ou des couleurs. Besoin d'un format que nous n'avons pas listé ? <a href="contact.html">Contactez-nous</a> et nous vous l'enverrons.</p></div>
+  <div class="features">
+    <div class="feature reveal reveal--d1">
+      <h3>Charte de marque</h3>
+      <p>Le système d'identité complet — voix, typographie, couleur, espacement et les règles derrière l'accent pêche. La référence unique pour utiliser SILENCE correctement sur la page.</p>
+      <a class="btn btn--sm" href="contact.html">Télécharger</a>
+    </div>
+    <div class="feature reveal reveal--d2">
+      <h3>Logos &amp; signatures verbales</h3>
+      <p>Signature verbale principale, monogramme et déclinaisons en SVG, PNG et EPS, fournis en variantes noire, blanche et inversée avec des gabarits de zone de protection.</p>
+      <a class="btn btn--sm" href="contact.html">Télécharger</a>
+    </div>
+    <div class="feature reveal reveal--d3">
+      <h3>Visuels produits</h3>
+      <p>Photographies de studio haute résolution de notre matériel, de nos vêtements et de nos accessoires, validées pour un usage éditorial et classées par collection.</p>
+      <a class="btn btn--sm" href="contact.html">Télécharger</a>
+    </div>
+    <div class="feature reveal reveal--d4">
+      <h3>Biographies des fondateurs</h3>
+      <p>Biographies et portraits approuvés de nos fondateurs et de notre direction, ainsi que des notes de contexte sur l'entreprise et ses grandes étapes.</p>
+      <a class="btn btn--sm" href="contact.html">Télécharger</a>
+    </div>
+  </div>
+</section>
+
+<section class="page-body reveal">
+  <div class="prose">
+    <h2>Demandes presse</h2>
+    <p>Pour les demandes d'interview, les échantillons produits, la vérification des faits ou toute autre question, contactez directement l'équipe presse de SILENCE à <strong>press@silence.example</strong>. Nous nous efforçons de répondre sous un jour ouvré, et nous sommes ravis de vous briefer à l'avance pour les sujets sous embargo.</p>
+    <ul>
+      <li><strong>E-mail presse</strong> — press@silence.example</li>
+      <li><strong>Partenariats &amp; collaborations artistiques</strong> — via notre <a href="contact.html">page de contact</a></li>
+      <li><strong>Délai de réponse</strong> — sous un jour ouvré, du lundi au vendredi</li>
+      <li><strong>Heures d'ouverture</strong> — 09:00–18:00 CET</li>
+    </ul>
+    <p>Vous n'êtes pas un média ? Nos pages <a href="shipping.html">livraison</a>, <a href="returns.html">retours</a> et <a href="contact.html">contact</a> couvrent les commandes et les questions générales.</p>
+  </div>
+  <a class="btn" href="contact.html">Contacter l'équipe presse</a>
+</section>
+
+<section class="cta-band reveal">
+  <h2>Vous bouclez ? Parlons-en.</h2>
+  <p>Dites-nous ce dont vous avez besoin et pour quand. Nous vous fournirons les faits, les ressources et la bonne personne à qui parler — rapidement.</p>
+  <div class="hero__actions">
+    <a class="btn btn--light" href="contact.html">Écrire à l'équipe presse</a>
+    <a class="btn btn--outline" href="journal.html">Lire le journal</a>
+  </div>
+</section>
+  </main>
+  <button class="to-top" id="toTop" aria-label="Haut de page">&uarr;</button>
+<footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Accueil SILENCE">
+          <img src="../logo-lockup-light.svg" alt="SILENCE" />
+        </a>
+        <p class="footer__tagline">Pour celles et ceux qui font le son. Vêtements et sagesse pour les musiciens — sinon, j'entends.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg></a>
+          <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16 3c.3 2.1 1.5 3.6 3.6 3.9v2.4c-1.3.1-2.5-.3-3.6-1v5.9c0 3-2.1 5.3-5 5.3a5 5 0 0 1-5-5c0-2.9 2.3-5 5.2-4.9v2.5c-.3-.1-.6-.1-.9-.1a2.5 2.5 0 0 0 0 5c1.4 0 2.4-1.1 2.4-2.6V3H16Z"/></svg></a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-7.6 8.7L23 22h-6.2l-4.9-6.4L6 22H2.9l8.1-9.3L2 2h6.4l4.4 5.8L18.9 2Z"/></svg></a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12Zm-13 3V9l5 3-5 3Z"/></svg></a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 9V7c0-1 .2-1.5 1.5-1.5H17V2.2C16.6 2.1 15.3 2 14.2 2 11.5 2 10 3.6 10 6.4V9H7.5v3H10v10h3.5V12H16l.5-3H14Z"/></svg></a>
+        </div>
+      </div>
+      <form class="footer__news js-form" data-success="Vous êtes inscrit·e. Vérifiez votre boîte mail pour 10 € offerts. ✔">
+        <h4>Rejoindre la liste</h4>
+        <p>Accès anticipé aux drops, exclusivités membres et 10 € sur votre première commande.</p>
+        <div class="footer__news-row">
+          <input type="email" name="email" placeholder="Adresse e-mail" required aria-label="Adresse e-mail" />
+          <button type="submit" class="btn">S'inscrire</button>
+        </div>
+        <p class="form-note" role="status"></p>
+      </form>
+    </div>
+
+    <div class="footer__cols">
+      <div><h4>Boutique</h4><a href="men.html">Homme</a><a href="women.html">Femme</a><a href="kids.html">Enfant</a><a href="new-releases.html">Nouveautés</a><a href="best-sellers.html">Meilleures ventes</a><a href="sale.html">Soldes</a></div>
+      <div><h4>Collections</h4><a href="shoes.html">Vêtements d'extérieur</a><a href="clothing.html">Vêtements</a><a href="accessories.html">Accessoires</a><a href="running.html">Pour les producteurs</a><a href="training.html">Pour les artistes</a><a href="lifestyle.html">Scène &amp; Tournée</a><a href="run.html">Course</a><a href="gym.html">Gym &amp; Entraînement</a></div>
+      <div><h4>Aide</h4><a href="faq.html">Aide &amp; FAQ</a><a href="shipping.html">Livraison</a><a href="returns.html">Retours</a><a href="order-status.html">Suivre la commande</a><a href="size-guide.html">Guide des tailles</a><a href="contact.html">Contact</a></div>
+      <div><h4>Compte</h4><a href="account.html">Mon compte</a><a href="order-history.html">Historique</a><a href="wishlist.html">Favoris</a><a href="membership.html">Adhésion</a><a href="gift-cards.html">Cartes cadeaux</a></div>
+      <div><h4>Entreprise</h4><a href="about.html">À propos</a><a href="sustainability.html">Responsabilité</a><a href="careers.html">Carrières</a><a href="press.html">Presse</a><a href="journal.html">Journal</a><a href="store-locator.html">Boutiques</a></div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="footer__bar-left">
+        <span class="footer__region">&#127757; Europe (EUR €) &middot; Français</span>
+        <span>&copy; 2026 SILENCE, Inc. Tous droits réservés.</span>
+      </div>
+      <nav class="footer__legal"><a href="terms.html">Conditions</a><a href="privacy.html">Confidentialité</a><a href="cookies.html">Cookies</a><a href="contact.html">Accessibilité</a></nav>
+      <div class="footer__pay" aria-label="Moyens de paiement acceptés">
+        <span class="footer__pay-label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10.5" rx="2" fill="currentColor"/><path d="M7.5 10.5V7.5a4.5 4.5 0 0 1 9 0v3" stroke="currentColor" stroke-width="2"/></svg>Paiements sécurisés</span>
+        <span class="pay-badge"><img src="../pay-orange.svg" alt="Orange Money" loading="lazy" /></span><span class="pay-badge"><img src="../pay-mtn.svg" alt="MTN MoMo" loading="lazy" /></span><span class="pay-badge"><img src="../pay-wave.svg" alt="Wave" loading="lazy" /></span><span class="pay-badge"><img src="../pay-djamo.svg" alt="Djamo" loading="lazy" /></span><span class="pay-badge"><img src="../pay-push.svg" alt="Push" loading="lazy" /></span><span class="pay-badge pay-badge--text" title="Visa">VISA</span>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

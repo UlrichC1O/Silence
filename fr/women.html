@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Femme — SILENCE</title>
+  <link rel="icon" type="image/svg+xml" href="../logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Aller au contenu</a>
+  <div class="anbar" id="anbar"><span>&#10038; Livraison offerte dès 75 € &middot; Rejoignez <a href="membership.html">Le Cercle SILENCE</a> pour l'accès anticipé &amp; 10 € offerts &rarr;</span><button class="anbar__x" data-anbar-close aria-label="Fermer">&times;</button></div>
+<div class="util">
+    <div class="util__left">SILENCE</div>
+    <nav class="util__right">
+      <select class="util__sel" id="langSel" aria-label="Langue"><option value="en">EN</option><option value="fr">FR</option></select><select class="util__sel" id="curSel" aria-label="Devise"><option value="EUR">€ EUR</option><option value="USD">$ Dollar</option><option value="XOF">CFA XOF</option></select><span>|</span>
+      <a href="store-locator.html">Trouver une boutique</a><span>|</span>
+      <a href="faq.html">Aide</a><span>|</span>
+      <a href="register.html">Rejoignez-nous</a><span>|</span>
+      <a href="login.html">Connexion</a>
+    </nav>
+  </div>
+  <header class="nav" id="nav">
+    <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">&#9776;</button>
+    <a href="index.html" class="nav__logo" aria-label="Accueil SILENCE">
+      <img src="../logo-lockup.svg" alt="SILENCE" />
+    </a>
+    <nav class="nav__menu" id="navMenu">
+      <div class="nav__item">
+        <a href="new-releases.html">Nouveautés</a>
+        <div class="mega">
+          <div><h5>À la une</h5><a href="new-releases.html">Nouveautés</a><a href="best-sellers.html">Meilleures ventes</a><a href="air-max.html">Signature</a><a href="sale.html">Soldes</a></div>
+          <div><h5>Boutique</h5><a href="shoes.html">Vêtements d'extérieur</a><a href="clothing.html">Vêtements</a><a href="accessories.html">Accessoires</a><a href="gift-cards.html">Cartes cadeaux</a></div>
+          <div><h5>Collections</h5><a href="running.html">Pour les producteurs</a><a href="training.html">Pour les artistes</a><a href="lifestyle.html">Scène &amp; Tournée</a><a href="football.html">DJs</a><a href="basketball.html">Vinyles &amp; Goodies</a></div>
+          <div><h5>Sport</h5><a href="run.html">Course</a><a href="gym.html">Gym &amp; Entraînement</a></div><div><h5>Inspiration</h5><a href="journal.html">Journal</a><a href="lookbook.html">Lookbook</a><a href="membership.html">Adhésion</a></div>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a href="men.html">Homme</a>
+        <div class="mega">
+          <div><h5>À la une</h5><a href="new-releases.html">Nouveautés</a><a href="best-sellers.html">Meilleures ventes</a><a href="sale.html">Soldes</a></div>
+          <div><h5>Extérieur</h5><a href="shoes.html">Tout l'extérieur</a><a href="running.html">Pour les producteurs</a><a href="training.html">Pour les artistes</a><a href="basketball.html">Vinyles &amp; Goodies</a></div>
+          <div><h5>Vêtements</h5><a href="clothing.html">Tous les vêtements</a><a href="accessories.html">Accessoires</a></div>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a href="women.html">Femme</a>
+        <div class="mega">
+          <div><h5>À la une</h5><a href="new-releases.html">Nouveautés</a><a href="best-sellers.html">Meilleures ventes</a><a href="sale.html">Soldes</a></div>
+          <div><h5>Extérieur</h5><a href="shoes.html">Tout l'extérieur</a><a href="running.html">Pour les producteurs</a><a href="lifestyle.html">Scène &amp; Tournée</a></div>
+          <div><h5>Vêtements</h5><a href="clothing.html">Tous les vêtements</a><a href="accessories.html">Accessoires</a></div>
+        </div>
+      </div>
+      <a href="kids.html">Enfant</a>
+      <a href="sale.html" class="is-sale">Soldes</a>
+    </nav>
+    <div class="nav__tools">
+      <form class="search" action="search.html" method="get" role="search">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2"/></svg>
+        <input type="search" name="q" placeholder="Rechercher" aria-label="Rechercher" />
+      </form>
+      <a href="wishlist.html" class="icon-btn" aria-label="Favoris">&#9825;<span class="badge" id="wishCount">0</span></a>
+      <button class="icon-btn" data-cart-open aria-label="Panier" style="border:none;background:transparent;cursor:pointer;font-size:1.25rem;">&#9094;<span class="badge" id="cartCount">0</span></button>
+      <a href="account.html" class="icon-btn" aria-label="Compte" style="font-size:1.2rem;">&#9737;</a>
+    </div>
+  </header>
+  <div class="drawer-overlay" id="drawerOverlay" data-cart-close></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Panier">
+    <div class="cart-drawer__head"><h3>Votre panier</h3><button class="cart-drawer__close" data-cart-close aria-label="Fermer">&times;</button></div>
+    <div class="cart-drawer__items" id="cartDrawerItems"></div>
+    <div class="cart-drawer__foot">
+      <div class="row"><span>Sous-total</span><span id="drawerSubtotal">€0.00</span></div>
+      <a href="cart.html" class="btn btn--block">Voir le panier &amp; payer</a>
+    </div>
+  </aside>
+  <main id="content">
+  <section class="page-hero">
+    <p class="page-hero__kicker">Boutique Femme</p>
+    <h1>Femme</h1>
+    <p>Des vêtements du studio à la scène, taillés pour elle.</p>
+  </section>
+  <nav class="breadcrumb"><a href="index.html">Accueil</a><span>/</span>Femme</nav>
+  <section class="shop">
+    <aside class="filters">
+      <h4>Catégorie</h4>
+      <label><input type="checkbox" data-filter="cat" value="clothing"/> Vêtements</label>
+      <label><input type="checkbox" data-filter="cat" value="active"/> Tenues de sport</label>
+      <label><input type="checkbox" data-filter="cat" value="accessories"/> Accessoires</label>
+      <h4>Coupe</h4>
+      <label><input type="checkbox" data-filter="gender" value="men"/> Homme</label>
+      <label><input type="checkbox" data-filter="gender" value="women"/> Femme</label>
+      <label><input type="checkbox" data-filter="gender" value="unisex"/> Unisexe</label>
+    </aside>
+    <div class="shop__main" id="shopMain">
+      <div class="shop__bar">
+        <span class="shop__count" id="shopCount"></span>
+        <label class="sort">Trier par
+          <select id="sortSelect">
+            <option value="featured">En vedette</option>
+            <option value="low">Prix : croissant</option>
+            <option value="high">Prix : décroissant</option>
+            <option value="name">Nom A–Z</option>
+          </select>
+        </label>
+      </div>
+      <div class="product-grid">
+      <article class="product" data-name="SILENCE Studio Jacket" data-price="189.99" data-cat="clothing" data-gender="unisex">
+        <a href="product-air-max-pulse.html" class="product__media" style="background:linear-gradient(150deg,#4a4a4a,#1c1c1c)"><span class="tag">Nouveauté</span></a>
+        <h3><a href="product-air-max-pulse.html">SILENCE Studio Jacket</a></h3>
+        <p class="product__cat">Vêtements d'extérieur</p>
+        <p class="product__price">€189.99</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="studio-jacket" data-name="SILENCE Studio Jacket" data-price="189.99" data-img="char">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="studio-jacket" data-name="SILENCE Studio Jacket" data-price="189.99" data-img="char" data-href="product-air-max-pulse.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      <article class="product" data-name="SILENCE Pleated Trouser" data-price="129.99" data-cat="clothing" data-gender="women">
+        <a href="product-pegasus-41.html" class="product__media" style="background:linear-gradient(150deg,#3a3a3a,#0c0c0c)"><span class="tag">Nouveauté</span></a>
+        <h3><a href="product-pegasus-41.html">SILENCE Pleated Trouser</a></h3>
+        <p class="product__cat">Pantalons</p>
+        <p class="product__price">€129.99</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="pleated-trouser" data-name="SILENCE Pleated Trouser" data-price="129.99" data-img="black">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="pleated-trouser" data-name="SILENCE Pleated Trouser" data-price="129.99" data-img="black" data-href="product-pegasus-41.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      <article class="product" data-name="SILENCE Wool Overshirt" data-price="159.99" data-cat="clothing" data-gender="men">
+        <a href="product-invincible-3.html" class="product__media" style="background:linear-gradient(150deg,#b9e6ff,#4aa8ff)"><span class="tag">Nouveauté</span></a>
+        <h3><a href="product-invincible-3.html">SILENCE Wool Overshirt</a></h3>
+        <p class="product__cat">Surchemise</p>
+        <p class="product__price">€159.99</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="wool-overshirt" data-name="SILENCE Wool Overshirt" data-price="159.99" data-img="sky">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="wool-overshirt" data-name="SILENCE Wool Overshirt" data-price="159.99" data-img="sky" data-href="product-invincible-3.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      <article class="product" data-name="SILENCE Studio Hoodie" data-price="119.99" data-cat="clothing" data-gender="unisex">
+        <a href="product-tech-fleece-hoodie.html" class="product__media" style="background:linear-gradient(150deg,#c9f7e3,#4fd4a0)"></a>
+        <h3><a href="product-tech-fleece-hoodie.html">SILENCE Studio Hoodie</a></h3>
+        <p class="product__cat">Sweat à capuche épais</p>
+        <p class="product__price">€119.99</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="studio-hoodie" data-name="SILENCE Studio Hoodie" data-price="119.99" data-img="mint">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="studio-hoodie" data-name="SILENCE Studio Hoodie" data-price="119.99" data-img="mint" data-href="product-tech-fleece-hoodie.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      <article class="product" data-name="SILENCE Tour Tee" data-price="31.49" data-cat="clothing" data-gender="men">
+        <a href="product-pro-dri-fit-tee.html" class="product__media" style="background:linear-gradient(150deg,#ffd1e0,#ff7eb0)"><span class="tag tag--sale">Soldes</span></a>
+        <h3><a href="product-pro-dri-fit-tee.html">SILENCE Tour Tee</a></h3>
+        <p class="product__cat">T-shirt de tournée</p>
+        <p class="product__price"><s>€44.99</s> €31.49</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="tour-tee" data-name="SILENCE Tour Tee" data-price="31.49" data-img="rose">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="tour-tee" data-name="SILENCE Tour Tee" data-price="31.49" data-img="rose" data-href="product-pro-dri-fit-tee.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      <article class="product" data-name="SILENCE B-Side Crewneck" data-price="89.99" data-cat="clothing" data-gender="unisex">
+        <a href="product-sportswear-joggers.html" class="product__media" style="background:linear-gradient(150deg,#d6d6d6,#9a9a9a)"></a>
+        <h3><a href="product-sportswear-joggers.html">SILENCE B-Side Crewneck</a></h3>
+        <p class="product__cat">Sweat ras du cou</p>
+        <p class="product__price">€89.99</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="bside-crew" data-name="SILENCE B-Side Crewneck" data-price="89.99" data-img="grey">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="bside-crew" data-name="SILENCE B-Side Crewneck" data-price="89.99" data-img="grey" data-href="product-sportswear-joggers.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      <article class="product" data-name="SILENCE Producer Cap" data-price="34.99" data-cat="accessories" data-gender="unisex">
+        <a href="product-air-max-pulse.html" class="product__media" style="background:linear-gradient(150deg,#f6e1d6,#edc4b3)"></a>
+        <h3><a href="product-air-max-pulse.html">SILENCE Producer Cap</a></h3>
+        <p class="product__cat">Casquette 6 pans</p>
+        <p class="product__price">€34.99</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="producer-cap" data-name="SILENCE Producer Cap" data-price="34.99" data-img="volt">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="producer-cap" data-name="SILENCE Producer Cap" data-price="34.99" data-img="volt" data-href="product-air-max-pulse.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      <article class="product" data-name="SILENCE Canvas Tote" data-price="29.99" data-cat="accessories" data-gender="unisex">
+        <a href="product-pro-dri-fit-tee.html" class="product__media" style="background:linear-gradient(150deg,#3a3a3a,#0c0c0c)"></a>
+        <h3><a href="product-pro-dri-fit-tee.html">SILENCE Canvas Tote</a></h3>
+        <p class="product__cat">Sac cabas</p>
+        <p class="product__price">€29.99</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="canvas-tote" data-name="SILENCE Canvas Tote" data-price="29.99" data-img="black">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="canvas-tote" data-name="SILENCE Canvas Tote" data-price="29.99" data-img="black" data-href="product-pro-dri-fit-tee.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      <article class="product" data-name="SILENCE Run Tee" data-price="49.99" data-cat="active" data-gender="unisex">
+        <a href="product-run-tee.html" class="product__media" style="background:linear-gradient(150deg,#b9e6ff,#4aa8ff)"><span class="tag">Sport</span></a>
+        <h3><a href="product-run-tee.html">SILENCE Run Tee</a></h3>
+        <p class="product__cat">Haut de course</p>
+        <p class="product__price">€49.99</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="run-tee" data-name="SILENCE Run Tee" data-price="49.99" data-img="sky">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="run-tee" data-name="SILENCE Run Tee" data-price="49.99" data-img="sky" data-href="product-run-tee.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      <article class="product" data-name="SILENCE Gym Shorts" data-price="44.99" data-cat="active" data-gender="men">
+        <a href="product-gym-shorts.html" class="product__media" style="background:linear-gradient(150deg,#4a4a4a,#1c1c1c)"><span class="tag">Sport</span></a>
+        <h3><a href="product-gym-shorts.html">SILENCE Gym Shorts</a></h3>
+        <p class="product__cat">Short d'entraînement</p>
+        <p class="product__price">€44.99</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="gym-shorts" data-name="SILENCE Gym Shorts" data-price="44.99" data-img="char">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="gym-shorts" data-name="SILENCE Gym Shorts" data-price="44.99" data-img="char" data-href="product-gym-shorts.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      <article class="product" data-name="SILENCE Track Pant" data-price="79.99" data-cat="active" data-gender="unisex">
+        <a href="product-track-pant.html" class="product__media" style="background:linear-gradient(150deg,#3a3a3a,#0c0c0c)"><span class="tag">Sport</span></a>
+        <h3><a href="product-track-pant.html">SILENCE Track Pant</a></h3>
+        <p class="product__cat">Pantalon de survêtement</p>
+        <p class="product__price">€79.99</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="track-pant" data-name="SILENCE Track Pant" data-price="79.99" data-img="black">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="track-pant" data-name="SILENCE Track Pant" data-price="79.99" data-img="black" data-href="product-track-pant.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      <article class="product" data-name="SILENCE Flex Hoodie" data-price="99.99" data-cat="active" data-gender="unisex">
+        <a href="product-flex-hoodie.html" class="product__media" style="background:linear-gradient(150deg,#c9f7e3,#4fd4a0)"><span class="tag">Sport</span></a>
+        <h3><a href="product-flex-hoodie.html">SILENCE Flex Hoodie</a></h3>
+        <p class="product__cat">Sweat à capuche d'entraînement</p>
+        <p class="product__price">€99.99</p>
+        <div class="product__actions">
+          <button class="btn btn--sm" data-add-to-cart data-id="flex-hoodie" data-name="SILENCE Flex Hoodie" data-price="99.99" data-img="mint">Ajouter au panier</button>
+          <button class="wish" data-wish data-id="flex-hoodie" data-name="SILENCE Flex Hoodie" data-price="99.99" data-img="mint" data-href="product-flex-hoodie.html" aria-label="Ajouter à la liste de souhaits">&#9825;</button>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+  </main>
+  <button class="to-top" id="toTop" aria-label="Haut de page">&uarr;</button>
+<footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Accueil SILENCE">
+          <img src="../logo-lockup-light.svg" alt="SILENCE" />
+        </a>
+        <p class="footer__tagline">Pour celles et ceux qui font le son. Vêtements et sagesse pour les musiciens — sinon, j'entends.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg></a>
+          <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16 3c.3 2.1 1.5 3.6 3.6 3.9v2.4c-1.3.1-2.5-.3-3.6-1v5.9c0 3-2.1 5.3-5 5.3a5 5 0 0 1-5-5c0-2.9 2.3-5 5.2-4.9v2.5c-.3-.1-.6-.1-.9-.1a2.5 2.5 0 0 0 0 5c1.4 0 2.4-1.1 2.4-2.6V3H16Z"/></svg></a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-7.6 8.7L23 22h-6.2l-4.9-6.4L6 22H2.9l8.1-9.3L2 2h6.4l4.4 5.8L18.9 2Z"/></svg></a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12Zm-13 3V9l5 3-5 3Z"/></svg></a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 9V7c0-1 .2-1.5 1.5-1.5H17V2.2C16.6 2.1 15.3 2 14.2 2 11.5 2 10 3.6 10 6.4V9H7.5v3H10v10h3.5V12H16l.5-3H14Z"/></svg></a>
+        </div>
+      </div>
+      <form class="footer__news js-form" data-success="Vous êtes inscrit·e. Vérifiez votre boîte mail pour 10 € offerts. ✔">
+        <h4>Rejoindre la liste</h4>
+        <p>Accès anticipé aux drops, exclusivités membres et 10 € sur votre première commande.</p>
+        <div class="footer__news-row">
+          <input type="email" name="email" placeholder="Adresse e-mail" required aria-label="Adresse e-mail" />
+          <button type="submit" class="btn">S'inscrire</button>
+        </div>
+        <p class="form-note" role="status"></p>
+      </form>
+    </div>
+
+    <div class="footer__cols">
+      <div><h4>Boutique</h4><a href="men.html">Homme</a><a href="women.html">Femme</a><a href="kids.html">Enfant</a><a href="new-releases.html">Nouveautés</a><a href="best-sellers.html">Meilleures ventes</a><a href="sale.html">Soldes</a></div>
+      <div><h4>Collections</h4><a href="shoes.html">Vêtements d'extérieur</a><a href="clothing.html">Vêtements</a><a href="accessories.html">Accessoires</a><a href="running.html">Pour les producteurs</a><a href="training.html">Pour les artistes</a><a href="lifestyle.html">Scène &amp; Tournée</a><a href="run.html">Course</a><a href="gym.html">Gym &amp; Entraînement</a></div>
+      <div><h4>Aide</h4><a href="faq.html">Aide &amp; FAQ</a><a href="shipping.html">Livraison</a><a href="returns.html">Retours</a><a href="order-status.html">Suivre la commande</a><a href="size-guide.html">Guide des tailles</a><a href="contact.html">Contact</a></div>
+      <div><h4>Compte</h4><a href="account.html">Mon compte</a><a href="order-history.html">Historique</a><a href="wishlist.html">Favoris</a><a href="membership.html">Adhésion</a><a href="gift-cards.html">Cartes cadeaux</a></div>
+      <div><h4>Entreprise</h4><a href="about.html">À propos</a><a href="sustainability.html">Responsabilité</a><a href="careers.html">Carrières</a><a href="press.html">Presse</a><a href="journal.html">Journal</a><a href="store-locator.html">Boutiques</a></div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="footer__bar-left">
+        <span class="footer__region">&#127757; Europe (EUR €) &middot; Français</span>
+        <span>&copy; 2026 SILENCE, Inc. Tous droits réservés.</span>
+      </div>
+      <nav class="footer__legal"><a href="terms.html">Conditions</a><a href="privacy.html">Confidentialité</a><a href="cookies.html">Cookies</a><a href="contact.html">Accessibilité</a></nav>
+      <div class="footer__pay" aria-label="Moyens de paiement acceptés">
+        <span class="footer__pay-label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10.5" rx="2" fill="currentColor"/><path d="M7.5 10.5V7.5a4.5 4.5 0 0 1 9 0v3" stroke="currentColor" stroke-width="2"/></svg>Paiements sécurisés</span>
+        <span class="pay-badge"><img src="../pay-orange.svg" alt="Orange Money" loading="lazy" /></span><span class="pay-badge"><img src="../pay-mtn.svg" alt="MTN MoMo" loading="lazy" /></span><span class="pay-badge"><img src="../pay-wave.svg" alt="Wave" loading="lazy" /></span><span class="pay-badge"><img src="../pay-djamo.svg" alt="Djamo" loading="lazy" /></span><span class="pay-badge"><img src="../pay-push.svg" alt="Push" loading="lazy" /></span><span class="pay-badge pay-badge--text" title="Visa">VISA</span>
+      </div>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
