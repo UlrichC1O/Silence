@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Size Guide — SILENCE</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="anbar" id="anbar"><span>&#10038; Free shipping over &euro;75 &middot; Join <a href="membership.html">The SILENCE Circle</a> for early access &amp; &euro;10 off &rarr;</span><button class="anbar__x" data-anbar-close aria-label="Dismiss">&times;</button></div>
+<div class="util">
+    <div class="util__left">SILENCE</div>
+    <nav class="util__right">
+      <select class="util__sel" id="langSel" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option></select><select class="util__sel" id="curSel" aria-label="Currency"><option value="EUR">€ EUR</option><option value="USD">$ Dollar</option><option value="XOF">CFA XOF</option></select><span>|</span>
+            <a href="store-locator.html">Find a Store</a><span>|</span>
+      <a href="faq.html">Help</a><span>|</span>
+      <a href="register.html">Join Us</a><span>|</span>
+      <a href="login.html">Sign In</a>
+    </nav>
+  </div>
+  <header class="nav" id="nav">
+    <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+    <a href="index.html" class="nav__logo" aria-label="SILENCE home">
+      <img src="logo-lockup.svg" alt="SILENCE" />
+    </a>
+    <nav class="nav__menu" id="navMenu">
+      <div class="nav__item">
+        <a href="new-releases.html">New &amp; Featured</a>
+        <div class="mega">
+          <div><h5>Featured</h5><a href="new-releases.html">New Drops</a><a href="best-sellers.html">Best Sellers</a><a href="air-max.html">Signature</a><a href="sale.html">Sale</a></div>
+          <div><h5>Shop</h5><a href="shoes.html">Outerwear</a><a href="clothing.html">Apparel</a><a href="accessories.html">Accessories</a><a href="gift-cards.html">Gift Cards</a></div>
+          <div><h5>Collections</h5><a href="running.html">For Producers</a><a href="training.html">For Artists</a><a href="lifestyle.html">Stage &amp; Tour</a><a href="football.html">DJs</a><a href="basketball.html">Vinyl &amp; Merch</a></div>
+          <div><h5>Sport</h5><a href="run.html">Running</a><a href="gym.html">Gym &amp; Training</a></div><div><h5>Inspiration</h5><a href="journal.html">Journal</a><a href="lookbook.html">Lookbook</a><a href="membership.html">Membership</a></div>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a href="men.html">Men</a>
+        <div class="mega">
+          <div><h5>Featured</h5><a href="new-releases.html">New Drops</a><a href="best-sellers.html">Best Sellers</a><a href="sale.html">Sale</a></div>
+          <div><h5>Outerwear</h5><a href="shoes.html">All Outerwear</a><a href="running.html">For Producers</a><a href="training.html">For Artists</a><a href="basketball.html">Vinyl &amp; Merch</a></div>
+          <div><h5>Apparel</h5><a href="clothing.html">All Apparel</a><a href="accessories.html">Accessories</a></div>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a href="women.html">Women</a>
+        <div class="mega">
+          <div><h5>Featured</h5><a href="new-releases.html">New Drops</a><a href="best-sellers.html">Best Sellers</a><a href="sale.html">Sale</a></div>
+          <div><h5>Outerwear</h5><a href="shoes.html">All Outerwear</a><a href="running.html">For Producers</a><a href="lifestyle.html">Stage &amp; Tour</a></div>
+          <div><h5>Apparel</h5><a href="clothing.html">All Apparel</a><a href="accessories.html">Accessories</a></div>
+        </div>
+      </div>
+      <a href="kids.html">Crew</a>
+      <a href="sale.html" class="is-sale">Sale</a>
+    </nav>
+    <div class="nav__tools">
+      <form class="search" action="search.html" method="get" role="search">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2"/></svg>
+        <input type="search" name="q" placeholder="Search" aria-label="Search" />
+      </form>
+      <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">&#9825;<span class="badge" id="wishCount">0</span></a>
+      <button class="icon-btn" data-cart-open aria-label="Bag" style="border:none;background:transparent;cursor:pointer;font-size:1.25rem;">&#9094;<span class="badge" id="cartCount">0</span></button>
+      <a href="account.html" class="icon-btn" aria-label="Account" style="font-size:1.2rem;">&#9737;</a>
+    </div>
+  </header>
+  <div class="drawer-overlay" id="drawerOverlay" data-cart-close></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag">
+    <div class="cart-drawer__head"><h3>Your Bag</h3><button class="cart-drawer__close" data-cart-close aria-label="Close">&times;</button></div>
+    <div class="cart-drawer__items" id="cartDrawerItems"></div>
+    <div class="cart-drawer__foot">
+      <div class="row"><span>Subtotal</span><span id="drawerSubtotal">€0.00</span></div>
+      <a href="cart.html" class="btn btn--block">View Bag &amp; Checkout</a>
+    </div>
+  </aside>
+  <main id="content">
+  <section class="page-hero">
+    <p class="page-hero__kicker">Find Your Fit</p>
+    <h1>Size Guide</h1>
+    <p>Measurements and conversions for footwear and apparel.</p>
+  </section>
+  <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span>Size Guide</nav>
+  <section class="page-body">
+    <div class="toggle-unit"><button data-unit="cm" class="active">CM</button><button data-unit="in">IN</button></div>
+    <h2>Footwear (Unisex)</h2>
+    <div class="table-wrap"><table class="tbl">
+      <thead><tr><th>UK</th><th>EU</th><th>US (M)</th><th>Foot length</th></tr></thead>
+      <tbody>
+        <tr><td>6</td><td>39.5</td><td>7</td><td><span data-cm>24.5 cm</span><span data-in style="display:none">9.6 in</span></td></tr>
+        <tr><td>7</td><td>41</td><td>8</td><td><span data-cm>25.5 cm</span><span data-in style="display:none">10.0 in</span></td></tr>
+        <tr><td>8</td><td>42.5</td><td>9</td><td><span data-cm>26.5 cm</span><span data-in style="display:none">10.4 in</span></td></tr>
+        <tr><td>9</td><td>44</td><td>10</td><td><span data-cm>27.5 cm</span><span data-in style="display:none">10.8 in</span></td></tr>
+        <tr><td>10</td><td>45</td><td>11</td><td><span data-cm>28.5 cm</span><span data-in style="display:none">11.2 in</span></td></tr>
+        <tr><td>11</td><td>46</td><td>12</td><td><span data-cm>29.5 cm</span><span data-in style="display:none">11.6 in</span></td></tr>
+      </tbody>
+    </table></div>
+    <h2 style="margin-top:2rem">Apparel (Tops)</h2>
+    <div class="table-wrap"><table class="tbl">
+      <thead><tr><th>Size</th><th>Chest</th><th>Waist</th></tr></thead>
+      <tbody>
+        <tr><td>XS</td><td><span data-cm>86 cm</span><span data-in style="display:none">34 in</span></td><td><span data-cm>71 cm</span><span data-in style="display:none">28 in</span></td></tr>
+        <tr><td>S</td><td><span data-cm>94 cm</span><span data-in style="display:none">37 in</span></td><td><span data-cm>79 cm</span><span data-in style="display:none">31 in</span></td></tr>
+        <tr><td>M</td><td><span data-cm>102 cm</span><span data-in style="display:none">40 in</span></td><td><span data-cm>87 cm</span><span data-in style="display:none">34 in</span></td></tr>
+        <tr><td>L</td><td><span data-cm>110 cm</span><span data-in style="display:none">43 in</span></td><td><span data-cm>95 cm</span><span data-in style="display:none">37 in</span></td></tr>
+        <tr><td>XL</td><td><span data-cm>118 cm</span><span data-in style="display:none">46 in</span></td><td><span data-cm>103 cm</span><span data-in style="display:none">41 in</span></td></tr>
+      </tbody>
+    </table></div>
+    <p style="margin-top:1.4rem;color:var(--grey)">Between sizes? We recommend sizing up for a relaxed fit. Still unsure? <a href="contact.html" style="color:var(--ink)">Ask our team</a>.</p>
+  </section>
+  </main>
+  <button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>
+<footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="SILENCE home">
+          <img src="logo-lockup-light.svg" alt="SILENCE" />
+        </a>
+        <p class="footer__tagline">For the people who make the sound. Apparel and wisdom for musicians — otherwise, I hear.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg></a>
+          <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16 3c.3 2.1 1.5 3.6 3.6 3.9v2.4c-1.3.1-2.5-.3-3.6-1v5.9c0 3-2.1 5.3-5 5.3a5 5 0 0 1-5-5c0-2.9 2.3-5 5.2-4.9v2.5c-.3-.1-.6-.1-.9-.1a2.5 2.5 0 0 0 0 5c1.4 0 2.4-1.1 2.4-2.6V3H16Z"/></svg></a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-7.6 8.7L23 22h-6.2l-4.9-6.4L6 22H2.9l8.1-9.3L2 2h6.4l4.4 5.8L18.9 2Z"/></svg></a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12Zm-13 3V9l5 3-5 3Z"/></svg></a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 9V7c0-1 .2-1.5 1.5-1.5H17V2.2C16.6 2.1 15.3 2 14.2 2 11.5 2 10 3.6 10 6.4V9H7.5v3H10v10h3.5V12H16l.5-3H14Z"/></svg></a>
+        </div>
+      </div>
+      <form class="footer__news js-form" data-success="You're on the list. Check your inbox for €10 off. ✔">
+        <h4>Join The List</h4>
+        <p>Early access to drops, member exclusives and €10 off your first order.</p>
+        <div class="footer__news-row">
+          <input type="email" name="email" placeholder="Email address" required aria-label="Email address" />
+          <button type="submit" class="btn">Sign Up</button>
+        </div>
+        <p class="form-note" role="status"></p>
+      </form>
+    </div>
+
+    <div class="footer__cols">
+      <div><h4>Shop</h4><a href="men.html">Men</a><a href="women.html">Women</a><a href="kids.html">Crew</a><a href="new-releases.html">New Drops</a><a href="best-sellers.html">Best Sellers</a><a href="sale.html">Sale</a></div>
+      <div><h4>Collections</h4><a href="shoes.html">Outerwear</a><a href="clothing.html">Apparel</a><a href="accessories.html">Accessories</a><a href="running.html">For Producers</a><a href="training.html">For Artists</a><a href="lifestyle.html">Stage &amp; Tour</a><a href="run.html">Running</a><a href="gym.html">Gym &amp; Training</a></div>
+      <div><h4>Help</h4><a href="faq.html">Help &amp; FAQ</a><a href="shipping.html">Shipping</a><a href="returns.html">Returns</a><a href="order-status.html">Track Order</a><a href="size-guide.html">Size Guide</a><a href="contact.html">Contact</a></div>
+      <div><h4>Account</h4><a href="account.html">My Account</a><a href="order-history.html">Orders</a><a href="wishlist.html">Wishlist</a><a href="membership.html">Membership</a><a href="gift-cards.html">Gift Cards</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="sustainability.html">Sustainability</a><a href="careers.html">Careers</a><a href="press.html">Press</a><a href="journal.html">Journal</a><a href="store-locator.html">Stores</a></div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="footer__bar-left">
+        <span class="footer__region">&#127757; Europe (EUR €) &middot; English</span>
+        <span>&copy; 2026 SILENCE, Inc. All rights reserved.</span>
+      </div>
+      <nav class="footer__legal"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="cookies.html">Cookies</a><a href="contact.html">Accessibility</a></nav>
+      <div class="footer__pay" aria-label="Accepted payment methods">
+        <span class="footer__pay-label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10.5" rx="2" fill="currentColor"/><path d="M7.5 10.5V7.5a4.5 4.5 0 0 1 9 0v3" stroke="currentColor" stroke-width="2"/></svg>Secure payments</span>
+        <span class="pay-badge"><img src="pay-orange.svg" alt="Orange Money" loading="lazy" /></span><span class="pay-badge"><img src="pay-mtn.svg" alt="MTN MoMo" loading="lazy" /></span><span class="pay-badge"><img src="pay-wave.svg" alt="Wave" loading="lazy" /></span><span class="pay-badge"><img src="pay-djamo.svg" alt="Djamo" loading="lazy" /></span><span class="pay-badge"><img src="pay-push.svg" alt="Push" loading="lazy" /></span><span class="pay-badge pay-badge--text" title="Visa">VISA</span>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
