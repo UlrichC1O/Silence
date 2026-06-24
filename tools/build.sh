@@ -7,7 +7,7 @@
 # =====================================================================
 set -uo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
-DIR="/Users/mac/maison-elan"
+DIR="$(cd "$HERE/.." && pwd)"
 
 echo "▶ Building English site…"
 bash "$HERE/build-en.sh" | sed 's/^/   /'

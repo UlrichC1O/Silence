@@ -13,7 +13,8 @@
 #   stay in sync — see README.md "Adding or changing a product".)
 # =====================================================================
 set -uo pipefail
-DIR="/Users/mac/maison-elan"
+HERE="$(cd "$(dirname "$0")" && pwd)"
+DIR="$(cd "$HERE/.." && pwd)"
 CT="$DIR/_content_fr"
 OUT="$DIR/fr"
 mkdir -p "$OUT"
